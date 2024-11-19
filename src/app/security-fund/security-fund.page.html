@@ -1,0 +1,45 @@
+<!-- <ion-header>
+    <ion-toolbar>
+        <ion-title>security-fund</ion-title>
+    </ion-toolbar>
+</ion-header> -->
+
+<ion-content fulllscreen (click)="dismiss()">
+
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <div class="footer_header">
+        <div class="text_box">
+            <h1 class="animate__animated animate__fadeInUp d-flex">
+                {{"security_deposite" | translate}}
+                <span class="end" (click)="dismiss()">
+                  {{"later" | translate}}
+                </span>
+            </h1>
+            <h2 class="animate__animated animate__fadeInUp">
+                {{"it_is_for_payment_security_only" | translate}}
+            </h2>
+        </div>
+    </div>
+
+    <div class="footer_content d-flex">
+        <div class="text_box">
+            <h1 class="animate__animated animate__fadeInUp d-flex">
+                ₦50
+            </h1>
+            <h2 class="animate__animated animate__fadeInUp">
+                {{"one_time_only" | translate}}
+            </h2>
+        </div>
+
+        <div class="img_box end animate__animated animate__fadeInRight">
+            <img src="assets/images/deposite.png" class="lightThemeImg">
+            <img src="assets/images/deposite-dark.png" class="darkThemeImg">
+        </div>
+    </div>
+
+    <ion-button size="large " shape="block " class="btn animate__animated animate__fadeInUp" (click)="dismiss()">
+        {{'pay_now' | translate}}
+    </ion-button>
+</ion-footer>

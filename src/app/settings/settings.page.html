@@ -1,0 +1,89 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+            <!-- <ion-back-button text="" defaultHref="sign-in" icon="arrow-back-outline"></ion-back-button> -->
+        </ion-buttons>
+    </ion-toolbar>
+
+    <div class="header_text">
+        <h1 class="animate__animated animate__fadeInUp">
+            {{"settings" | translate}}
+        </h1>
+        <h2 class="animate__animated animate__fadeInUp">
+            {{"set_your_preferences" | translate}}
+        </h2>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label mode="md">{{"select_language" | translate}}</ion-label>
+                    <div class="input_box d-flex">
+                        <ion-select okText="{{'okay' | translate}}" cancelText="{{'dismiss' | translate}}" [(ngModel)]="defaultLanguageCode" (ionChange)="languageConfirm()">
+                            <ion-select-option *ngFor="let language of config.availableLanguages" [value]="language.code">
+                                {{language.name}}
+                            </ion-select-option>
+                        </ion-select>
+                        <ion-icon class="zmdi zmdi-chevron-down  ion-text-end end" style="color: var(--text-dark);"></ion-icon>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label mode="md">{{"app_mode" | translate}}</ion-label>
+                    <div class="input_box d-flex">
+                        <ion-select okText="{{'okay' | translate}}" [(ngModel)]="darkModeStatus" (ionChange)="onDarkMode($event)" cancelText="{{'dismiss' | translate}}" placeholder="{{'select_one' | translate}}">
+                            <ion-select-option value="true">
+                                {{"dark_mode" | translate}}
+                            </ion-select-option>
+                            <ion-select-option value="false">
+                                {{"light_mode" | translate}}
+                            </ion-select-option>
+                        </ion-select>
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end end "></ion-icon>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label mode="md">{{"distance_unity" | translate}}</ion-label>
+                    <div class="input_box d-flex">
+                        <ion-select [(ngModel)]="distance_unity" okText="{{'okay' | translate}}" cancelText="{{'dismiss' | translate}}" placeholder="{{'select_one' | translate}}">
+                            <ion-select-option value="Kilometer">
+                                Km (Kilometer)
+                            </ion-select-option>
+                            <ion-select-option value="Millimeters">
+                                Mm (Millimeters)
+                            </ion-select-option>
+                            <ion-select-option value="Centimeters">
+                                Cm (Centimeters)
+                            </ion-select-option>
+                            <ion-select-option value="Meters">
+                                M (Meters)
+                            </ion-select-option>
+                        </ion-select>
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end end "></ion-icon>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+
+    <div class="otherLinks">
+        <h3 class="d-flex animate__animated animate__fadeInUp" (click)="termsConditions()">
+            {{"terms_conditions" | translate}}
+        </h3>
+        <h3 class="d-flex animate__animated animate__fadeInUp" (click)="privacyPolicy()">
+            {{"privacy_polisy" | translate}}
+        </h3>
+        <h3 class="d-flex animate__animated animate__fadeInUp" (click)="signIn()">
+            {{"logout" | translate}}
+        </h3>
+    </div>
+</ion-content>

@@ -1,0 +1,205 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="app_logo">
+                <img src="assets/images/logo.png" class="lightThemeImg">
+                <img src="assets/images/logoForDarkTheme.png" class="darkThemeImg">
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="map center_img">
+        <img src="assets/images/map.png" class="map_img crop_img lightThemeImg">
+        <img src="assets/images/map-dark.png" class="map_img crop_img darkThemeImg">
+    </div>
+
+    <div class="" style="position: relative;  min-height: calc(100vh - 202px); overflow: hidden;">
+        <div class="bike_stand animate__animated animate__zoomIn" style="top:20%; left: 31%;">
+            <img src="assets/images/ic_bike.png">
+            <!-- <h3>5</h3> -->
+        </div>
+        <div class="bike_stand animate__animated animate__zoomIn" style="top:30%; left: 74%;">
+            <img src="assets/images/ic_bike.png">
+            <!-- <h3>4</h3> -->
+        </div>
+        <div class="bike_stand animate__animated animate__zoomIn" style="top:38%; left: 20%;">
+            <img src="assets/images/ic_bike.png">
+            <!-- <h3>5</h3> -->
+        </div>
+        <div class="bike_stand animate__animated animate__zoomIn" style="top:42%; left: 50%;">
+            <img src="assets/images/ic_bike.png">
+            <!-- <h3>7</h3> -->
+        </div>
+        <div class="bike_stand animate__animated animate__zoomIn" style="top:46%; left: 76%;">
+            <img src="assets/images/ic_bike.png">
+            <!-- <h3>2</h3> -->
+        </div>
+        <div class="bike_stand animate__animated animate__zoomIn" style="top:57%; left: 17%;">
+            <img src="assets/images/ic_bike.png">
+            <!-- <h3>8</h3> -->
+        </div>
+
+        <div class="my_location animate__animated animate__zoomIn" style="top:19%; left: 44%;">
+            <div class="animation_box a"></div>
+            <div class="animation_box b"></div>
+            <ion-icon class="zmdi zmdi-navigation"></ion-icon>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <!-- Ride info section start -->
+    <div class="ride_info animate__animated animate__fadeInUp" *ngIf="currDiv == 'ride_info'" [ngClass]="toggleClass ? 'toggleClass active' : 'toggleClass'">
+        <div class="pullup"></div>
+        <div class="ride_info_header d-flex">
+            <h2 class="animate__animated animate__fadeInUp">
+                Ekobike BK2145
+            </h2>
+            <div class="img_box end animate__animated animate__fadeInRight">
+                <img src="assets/images/banner_img2.png">
+            </div>
+        </div>
+        <div class="ride_info_content">
+            <ion-row class="animate__animated animate__fadeInUp">
+                <ion-col size="6">
+                    <div class="text">
+                        <h2 class="">
+                            {{"battery_level" | translate}}
+                        </h2>
+                        <h3 class=" d-flex">
+                            <img src="assets/images/ic_battery.png">&nbsp;&nbsp;90%
+                        </h3>
+                    </div>
+                </ion-col>
+                <ion-col size="6">
+                    <div class="text">
+                        <h2 class="">
+                            {{"range_up_to" | translate}}
+                        </h2>
+                        <h3 class=" d-flex">
+                            <img src="assets/images/ic_power.png">&nbsp;&nbsp;30-35 km
+                        </h3>
+                    </div>
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="animate__animated animate__fadeInUp">
+                <ion-col size="6">
+                    <div class="text">
+                        <h2 class="">
+                            {{"time_used" | translate}}
+                        </h2>
+                        <h3 class=" d-flex">
+                            <ion-icon class="zmdi zmdi-watch ion-text-start"></ion-icon>02:15 min
+                        </h3>
+                    </div>
+                </ion-col>
+                <ion-col size="6">
+                    <div class="text">
+                        <h2 class="">
+                            {{"travelled" | translate}}
+                        </h2>
+                        <h3 class=" d-flex">
+                            <ion-icon class="zmdi zmdi-navigation ion-text-start"></ion-icon>3.5km
+                        </h3>
+                    </div>
+                </ion-col>
+            </ion-row>
+
+            <div class="ride_paused">
+                <div class="ride_paused_inner">
+                    <h2>{{'ride_paused' | translate}}</h2>
+                    <ion-row class="animate__animated animate__fadeInUp">
+                        <ion-col size="6">
+                            <div class="text">
+                                <h2 class="">
+                                    {{"paused_time" | translate}}
+                                </h2>
+                                <h3 class=" d-flex">
+                                    <ion-icon class="zmdi zmdi-watch ion-text-start"></ion-icon>01:58 min
+                                </h3>
+                            </div>
+                        </ion-col>
+                        <ion-col size="6">
+                            <div class="text">
+                                <h2 class="">
+                                    {{"cost_of_pause" | translate}}
+                                </h2>
+                                <h3 class=" d-flex">
+                                    ₦0.10
+                                </h3>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <p>
+                        {{"no_cost_till_1_min_then" | translate}}
+                    </p>
+                </div>
+            </div>
+
+            <ion-row class="animate__animated animate__fadeInUp">
+                <ion-col size="6">
+                    <ion-button size="large" shape="block" class="btn ridePause" (click)="ridePuse()">
+                        <ion-icon class="zmdi zmdi-pause ion-text-start"></ion-icon>
+                        {{'pause' | translate}}
+                    </ion-button>
+                    <ion-button size="large" shape="block" class="btn resume" (click)="ridePuse()">
+                        <ion-icon class="zmdi zmdi-play ion-text-start"></ion-icon>
+                        {{'resume' | translate}}
+                    </ion-button>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-button size="large" shape="block" class="btn end_ride" (click)="ShowDiv('end_trip')">
+                        <ion-icon class="zmdi zmdi-stop ion-text-start"></ion-icon>
+                        {{'end_ride' | translate}}
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+    <!--Ride info section end -->
+
+    <!-- End Trip section start -->
+    <div class="end_trip  animate__animated animate__fadeInUp" *ngIf="currDiv == 'end_trip'">
+        <div class="end_trip_header d-flex">
+            <div class="icon_box">
+                <img src="assets/images/ic_bike.png">
+            </div>
+            <div class="text_box">
+                <h3>
+                    {{'drop_at' | translate}} Nearest point
+                </h3>
+                <h2> Avenue Close, Magodo Estate</h2>
+            </div>
+            <div class="distance ion-text-center end">
+                <ion-icon class="zmdi zmdi-navigation"></ion-icon>
+                <h4>3.2Km</h4>
+            </div>
+        </div>
+
+        <div class="end_trip_content">
+            <img src="assets/images/img_Eletrazone.png" class="lightThemeImg animate__animated animate__fadeInUp">
+            <img src="assets/images/img_EletrazoneDark.png" class="darkThemeImg animate__animated animate__fadeInUp">
+            <h2 class="animate__animated animate__fadeInUp">{{'confirm_end_ride' | translate}}?</h2>
+            <h3 class="animate__animated animate__fadeInUp">{{'make_sure_your_park_at' | translate}} Ekobike {{'zone_only' | translate}}</h3>
+            <ion-row class="animate__animated animate__fadeInUp">
+                <ion-col size="6">
+                    <ion-button size="large" shape="block" class="btn ridePause back" (click)="ShowDiv('ride_info')">
+                        {{'back' | translate}}
+                    </ion-button>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-button size="large" shape="block" class="btn end_ride" (click)="rideEnded()">
+                        {{'confirm' | translate}}
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+    <!-- End Trip section start -->
+</ion-footer>

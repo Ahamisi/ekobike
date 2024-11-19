@@ -1,0 +1,128 @@
+<ion-app [dir]="rtlSide">
+    <ion-split-pane contentId="main-content">
+        <ion-menu *ngIf="showSideMenu" contentId="main-content" [side]="rtlSideMenu" type="overlay">
+            <ion-header class="bg_transparent">
+                <!-- <ion-toolbar>
+                    <ion-title>
+                        <div class="title_inner d-flex">
+                            <ion-menu-toggle auto-hide="false">
+                                <ion-icon class="zmdi zmdi-close"></ion-icon>
+                            </ion-menu-toggle>
+                        </div>
+                    </ion-title>
+                </ion-toolbar> -->
+                <ion-button *ngIf="config.demoMode" size="large" class="btn end" expand="full" (click)="buyappalert()">
+                    {{"buy_this_app" | translate}}
+                </ion-button>
+                <ion-menu-toggle auto-hide="false" (click)="my_profile()">
+                    <div class="brofile_box">
+                        <div class="img_box center_img">
+                            <img src="assets/images/profile.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h2 class="d-flex">Babajide<br>Sanwolu
+                                <ion-icon class="zmdi zmdi-chevron-right ion-text-end end"></ion-icon>
+                            </h2>
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+            </ion-header>
+            <ion-content fullscreen>
+                <ion-list>
+                    <ion-menu-toggle auto-hide="false" class="animate__animated animate__fadeInUp" (click)="home()">
+                        <ion-item lines="none">
+                            <div class="item_inner d-flex">
+                                <ion-icon class="zmdi zmdi-home ion-text-start"></ion-icon>
+                                <h2>{{'home' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false" class="animate__animated animate__fadeInUp" (click)="wallet()">
+                        <ion-item lines="none">
+                            <div class="item_inner d-flex">
+                                <ion-icon class="zmdi zmdi-balance-wallet ion-text-start"></ion-icon>
+                                <h2>{{'electra_money' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false" class="animate__animated animate__fadeInUp" (click)="rideHistory()">
+                        <ion-item lines="none">
+                            <div class="item_inner d-flex">
+                                <ion-icon class="zmdi zmdi-bike ion-text-start"></ion-icon>
+                                <h2>{{'ride_history' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false" class="animate__animated animate__fadeInUp" (click)="referAndEarn()">
+                        <ion-item lines="none">
+                            <div class="item_inner d-flex">
+                                <ion-icon class="zmdi zmdi-accounts-add ion-text-start"></ion-icon>
+                                <h2>{{'refer_earn' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false" class="animate__animated animate__fadeInUp" (click)="faq()">
+                        <ion-item lines="none">
+                            <div class="item_inner d-flex">
+                                <ion-icon class="zmdi zmdi-help ion-text-start"></ion-icon>
+                                <h2>{{'faq' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle auto-hide="false" class="animate__animated animate__fadeInUp" (click)="settings()">
+                        <ion-item lines="none">
+                            <div class="item_inner d-flex">
+                                <ion-icon class="zmdi zmdi-settings ion-text-start"></ion-icon>
+                                <h2>{{'settings' | translate}}</h2>
+                            </div>
+                        </ion-item>
+                    </ion-menu-toggle>
+
+                    <div class="other_info">
+                        <img src="assets/images/menu.png" class="lightThemeImg">
+                        <img src="assets/images/menu_dark.png" class="darkThemeImg">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'rides_taken' | translate}}</h3>
+                                <h2 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-bike ion-text-start"></ion-icon>
+                                    39 {{'rides' | translate}}</h2>
+                            </ion-col>
+                            <ion-col size="6">
+                                <h3>{{'time_rides' | translate}}</h3>
+                                <h2 class="d-flex">
+                                    <ion-icon class="zmdi  zmdi-watch ion-text-start"></ion-icon>
+                                    03:16 hrs</h2>
+                            </ion-col>
+                            <ion-col size="6">
+                                <h3>{{'distance_traveled' | translate}}</h3>
+                                <h2 class="d-flex">
+                                    <ion-icon class="zmdi zmdi-navigation ion-text-start"></ion-icon>
+                                    90.5km</h2>
+                            </ion-col>
+                            <ion-col size="6">
+                                <h3>{{'carbon' | translate}}</h3>
+                                <h2 class="d-flex">
+                                    <ion-icon class="zmdi  zmdi-fire ion-text-start"></ion-icon>
+                                    6554 gms</h2>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-list>
+            </ion-content>
+
+            <ion-footer class="ion-no-border" *ngIf="config.demoMode">
+                <ion-menu-toggle auto-hide="false">
+                    <div class="developed_by d-flex" (click)="developed_by()">
+                        <h2>{{"developed_by" | translate}}</h2>
+                        <div class="img_box ion-text-end end">
+                            <img src="assets/images/opus_labs_dark.png" class="lightThemeImg">
+                            <img src="assets/images/opus_labs.png" class="darkThemeImg">
+                        </div>
+                    </div>
+                </ion-menu-toggle>
+            </ion-footer>
+        </ion-menu>
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
+</ion-app>

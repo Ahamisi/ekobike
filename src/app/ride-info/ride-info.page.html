@@ -1,0 +1,151 @@
+<ion-header>
+    <ion-toolbar>
+        <!-- <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons> -->
+    </ion-toolbar>
+    <div class="header_text d-flex">
+        <div class="text">
+            <ion-icon icon="arrow-back-outline" (click)="goToBack()"></ion-icon>
+            <h1 class="animate__animated animate__fadeInUp">
+                BK2145
+            </h1>
+            <h2 class="animate__animated animate__fadeInUp">
+                12 Aug 2022, 06:53 pm
+            </h2>
+        </div>
+        <div class="img_box end">
+            <img src="assets/images/banner_img2.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="ride_info">
+        <ion-row class="animate__animated animate__fadeInUp">
+            <ion-col size="6">
+                <div class="text">
+                    <h2 class="">
+                        {{"you_travelled" | translate}}
+                    </h2>
+                    <h3 class=" d-flex">
+                        <ion-icon class="zmdi zmdi-navigation ion-text-start"></ion-icon> 6.0 km
+                    </h3>
+                </div>
+            </ion-col>
+            <ion-col size="6">
+                <div class="text">
+                    <h2 class="">
+                        {{"cardon_saved" | translate}}
+                    </h2>
+                    <h3 class=" d-flex">
+                        <ion-icon class="zmdi zmdi-fire ion-text-start"></ion-icon> 890 gm
+                    </h3>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="animate__animated animate__fadeInUp">
+            <ion-col size="6">
+                <div class="text">
+                    <h2 class="">
+                        {{"time_used" | translate}}
+                    </h2>
+                    <h3 class=" d-flex">
+                        <ion-icon class="zmdi zmdi-watch ion-text-start"></ion-icon>9:12 min
+                    </h3>
+                </div>
+            </ion-col>
+            <ion-col size="6">
+                <div class="text">
+                    <h2 class="">
+                        {{"travelled" | translate}}
+                    </h2>
+                    <h3 class=" d-flex">
+                        <ion-icon class="zmdi zmdi-watch ion-text-start"></ion-icon>1:12 min
+                    </h3>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+
+    <div class="location_info">
+        <div class="location d-flex animate__animated animate__fadeInUp">
+            <div class="icon_box">
+                <ion-icon class="zmdi zmdi-pin ion-text-center"></ion-icon>
+            </div>
+            <div class="text_box">
+                <h3 class="d-flex">
+                    {{'pickup_from' | translate}} <span class="end">06:36 pm</span>
+                </h3>
+                <h2>23rd Avenue Street</h2>
+            </div>
+        </div>
+        <div class="dotts">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="location d-flex animate__animated animate__fadeInUp">
+            <div class="icon_box">
+                <ion-icon class="zmdi zmdi-navigation ion-text-center"></ion-icon>
+            </div>
+            <div class="text_box">
+                <h3 class="d-flex">
+                    {{'drop_at' | translate}} <span class="end">06:46 pm</span>
+                </h3>
+                <h2>Parker point tower</h2>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <div class="fare">
+        <h2 class="animate__animated animate__fadeInUp"> {{'fare_breakdown' | translate}}</h2>
+
+        <h3 class="animate__animated animate__fadeInUp d-flex">
+            {{'fixed_rent' | translate}}
+            <span class="end">
+              ₦5.00
+          </span>
+        </h3>
+
+        <h3 class="animate__animated animate__fadeInUp d-flex">
+            {{'km_ride_fare' | translate}}
+            <span class="end">
+              ₦3.00
+          </span>
+        </h3>
+        <h3 class="animate__animated animate__fadeInUp d-flex">
+            {{'pause_fare' | translate}}
+            <span class="end">
+              ₦.30
+          </span>
+        </h3>
+        <h3 class="paid animate__animated animate__fadeInUp d-flex">
+            {{'paid_form_wallet' | translate}}
+            <span class="end">
+              ₦8.30
+          </span>
+        </h3>
+    </div>
+
+    <div class="bottom_text">
+        <ion-row>
+            <ion-col size="6">
+                <h2 class="d-flex">
+                    <ion-icon class="zmdi zmdi-email"></ion-icon>
+                    {{'email_invoice' | translate}}
+                </h2>
+            </ion-col>
+            <ion-col size="6" class="d-flex">
+                <h2 class="d-flex end">
+                    <ion-icon class="zmdi zmdi-help"></ion-icon>
+                    {{'need_help' | translate}} ?
+                </h2>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-footer>

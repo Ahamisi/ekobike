@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    <div class="header_text d-flex">
+        <h1 class="animate__animated animate__fadeInUp">
+            {{"profile" | translate}}
+        </h1>
+
+        <div class="img_container end">
+            <div class="img_box center_img animate__animated animate__zoomIn">
+                <img src="assets/images/profile.png" class="crop_img">
+            </div>
+            <ion-icon class="zmdi zmdi-camera animate__animated animate__zoomIn"></ion-icon>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label>{{'full_name' | translate}}</ion-label>
+                    <div class="input_box">
+                        <ion-input type="name" value="Samantha Smith" placeholder="{{'enter_your_full_name' | translate}}"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label>{{'phone_number' | translate}}</ion-label>
+                    <div class="input_box">
+                        <ion-input type="tel" value="+1 987 654 3210" placeholder="{{'enter_phone_number' | translate}}"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label>{{'email_address' | translate}}</ion-label>
+                    <div class="input_box">
+                        <ion-input type="email" value="samanthasmith@email.com" placeholder="{{'enter_your_email_address' | translate}}"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" shape="block" class="btn animate__animated animate__fadeInUp">{{'update' | translate}}</ion-button>
+</ion-footer>

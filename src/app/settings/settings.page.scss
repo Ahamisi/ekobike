@@ -1,0 +1,40 @@
+.form {
+    padding-bottom: 20px;
+    ion-item {
+        margin-bottom: 15px !important;
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+        ion-label {
+            padding: 0!important;
+            color: var(--text-dark) !important;
+        }
+        .item_inner .input_box {
+            border: 0 !important;
+            padding: 0;
+            background: none !important;
+            ion-icon {
+                color: var(--text-dark)!important;
+                font-size: 1.5rem!important;
+            }
+        }
+        &.item-select ion-select {
+            color: var(--text-light) !important;
+            padding-top: 3px;
+            font-size: 1.05rem !important;
+            font-weight: 500 !important;
+        }
+    }
+}
+
+.otherLinks {
+    border-top: 2px dashed var(--border-line-color);
+    padding: 25px 25px;
+    h3 {
+        margin: 0;
+        color: var(--text-dark);
+        font-size: 1.05rem;
+        font-weight: 500;
+        padding-bottom: 30px;
+    }
+}

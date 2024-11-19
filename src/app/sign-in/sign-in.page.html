@@ -1,0 +1,78 @@
+<ion-header class="bg_transparent">
+    <div class="banner d-flex">
+        <div class="banner_text">
+            <div class="logo animate__animated animate__fadeInUp">
+                <img src="assets/images/logo.png" class="forLightTheme">
+                <img src="assets/images/logoForDarkTheme.png" class="forDarkTheme">
+            </div>
+
+            <div class="text">
+                <h2 class="animate__animated animate__fadeInUp">
+                    {{"hi_mate" | translate}},
+                </h2>
+                <h1 class="animate__animated animate__fadeInUp">
+                    {{"sign_in_now" | translate}}
+                </h1>
+            </div>
+        </div>
+
+        <div class="banner_img end ">
+            <img src="assets/images/banner_img.png" class="animate__animated animate__fadeInRight">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="form">
+        <ion-list lines="none">
+            <!-- <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label mode="md">{{"select_country" | translate}}</ion-label>
+                    <div class="input_box d-flex">
+                        <ion-select mode="md" placeholder="{{'select_country' | translate}}" cancelText="{{'cancel' | translate}}" okText="{{'ok' | translate}}">
+                            <ion-select-option *ngFor="let country of countries" [value]="country.callingCodes[0]">{{country.name}}</ion-select-option>
+                        </ion-select>
+                        <ion-icon class="zmdi zmdi-caret-down  ion-text-end end"></ion-icon>
+                    </div>
+                </div>
+            </ion-item> -->
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <ion-label>{{'phone_number' | translate}}</ion-label>
+                    <div class="input_box">
+                        <ion-input type="number" value="" placeholder="{{'enter_phone_number' | translate}}"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-button size="large" shape="block" class="btn animate__animated animate__fadeInUp" (click)="continue()">{{'continue' | translate}}</ion-button>
+
+        <div class="or_continue_with">
+            <h3 class="ion-text-center animate__animated animate__fadeInUp">{{'or_continue_with' | translate}}</h3>
+            <ion-button size="large" shape="block" fill="outline" class="btn animate__animated animate__fadeInUp" (click)="home()">
+                <span>
+                    <small>
+                        <img src="assets/images/fb.png">
+                    </small>
+                     {{'continue_with_facebook' | translate}}
+                </span>
+            </ion-button>
+            <ion-button size="large" shape="block" fill="outline" class="btn animate__animated animate__fadeInUp" (click)="home()">
+                <span>
+                    <small>
+                        <img src="assets/images/google.png">
+                    </small>
+                    {{'continue_with_google' | translate}}
+                </span>
+            </ion-button>
+            <ion-button size="large" shape="block" fill="outline" class="btn apple_btn animate__animated animate__fadeInUp" (click)="home()">
+                <span>
+                    <small>
+                        <img src="assets/images/apple.png">
+                    </small>
+                    {{'continue_with_apple' | translate}}
+                </span>
+            </ion-button>
+        </div>
+    </div>
+</ion-content>

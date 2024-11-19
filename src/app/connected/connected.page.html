@@ -1,0 +1,99 @@
+<ion-header>
+    <!-- <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="arrow-back-outline"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar> -->
+
+    <div class="header_text">
+        <h1 class="animate__animated animate__fadeInUp">
+            Ekobike BK2145
+        </h1>
+        <h2 class="animate__animated animate__fadeInUp">
+            {{"ready_to_go" | translate}}
+        </h2>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="banner d-flex">
+        <div class="banner_text">
+            <div class="text">
+                <h2 class="animate__animated animate__fadeInUp">
+                    {{"battery_level" | translate}}
+                </h2>
+                <h3 class="animate__animated animate__fadeInUp d-flex">
+                    <img src="assets/images/ic_battery.png">&nbsp;90%
+                </h3>
+            </div>
+
+            <div class="text">
+                <h2 class="animate__animated animate__fadeInUp">
+                    {{"range_up_to" | translate}}
+                </h2>
+                <h3 class="animate__animated animate__fadeInUp d-flex">
+                    <img src="assets/images/ic_power.png">&nbsp;30-35 km
+                </h3>
+            </div>
+        </div>
+
+        <div class="banner_img end ">
+            <img src="assets/images/banner_img2.png" class="animate__animated animate__fadeInRight">
+        </div>
+    </div>
+
+    <div class="fare_will_be">
+        <h2 class="animate__animated animate__fadeInUp">
+            {{"fare_will_be" | translate}}
+        </h2>
+        <ion-row>
+            <ion-col size="4" class="animate__animated animate__fadeInUp">
+                <div class="text">
+                    <h2>
+                        {{"fixed_rent" | translate}}
+                    </h2>
+                    <h3>
+                        ₦5.00
+                    </h3>
+                </div>
+            </ion-col>
+            <ion-col size="4" class="animate__animated animate__fadeInUp">
+                <div class="text">
+                    <h2>
+                        {{"per_km" | translate}}
+                    </h2>
+                    <h3>
+                        ₦0.50
+                    </h3>
+                </div>
+            </ion-col>
+            <ion-col size="4" class="animate__animated animate__fadeInUp">
+                <div class="text">
+                    <h2>
+                        {{"pause_min" | translate}}
+                    </h2>
+                    <h3>
+                        ₦0.10
+                    </h3>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <ion-row class="ion-text-center">
+        <ion-col size="6">
+            <img src="assets/images/img_Eletrazone.png" class="lightThemeImg">
+            <img src="assets/images/img_EletrazoneDark.png" class="darkThemeImg">
+            <h3> {{"park_in" | translate}} <br> Ekobike {{"zone" | translate}}</h3>
+        </ion-col>
+        <ion-col size="6">
+            <img src="assets/images/img_private.png" class="lightThemeImg">
+            <img src="assets/images/img_privateDark.png" class="darkThemeImg">
+            <h3> {{"do_not_park_in" | translate}} <br> {{"private_area" | translate}}</h3>
+        </ion-col>
+    </ion-row>
+
+    <ion-button size="large" shape="block" class="btn animate__animated animate__fadeInUp" (click)="rideStarted()">{{'start_ride' | translate}}</ion-button>
+</ion-footer>

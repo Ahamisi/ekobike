@@ -1,0 +1,30 @@
+ion-header .header_text {
+    min-height: fit-content;
+}
+
+.container {
+    padding: 20px 20px;
+    h2 {
+        margin: 0;
+        color: var(--text-light);
+        font-size: 1.05rem;
+        padding-bottom: 10px;
+    }
+    p {
+        margin: 0;
+        color: var(--text-black);
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 29px;
+        padding-bottom: 25px;
+        align-items: flex-start;
+        ion-icon {
+            min-width: 30px;
+            color: var(--primary);
+            font-size: 0.75rem;
+            position: relative;
+            top: 7px;
+            padding: 2px;
+        }
+    }
+}

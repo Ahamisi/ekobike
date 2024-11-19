@@ -1,0 +1,199 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="app_logo">
+                <img src="assets/images/logo.png" class="lightThemeImg">
+                <img src="assets/images/logoForDarkTheme.png" class="darkThemeImg">
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <div class="map center_img">
+        <img src="assets/images/map.png" class="map_img crop_img lightThemeImg">
+        <img src="assets/images/map-dark.png" class="map_img crop_img darkThemeImg">
+    </div>
+
+    <div class="" style="position: relative;  min-height: calc(100vh - 202px); overflow: hidden;" *ngIf="currDiv == 'scan_btn'">
+        <div class="bike_stand animate__animated animate__zoomIn " style="top:20%; left: 31%;" (click)="showBikeStandInfo('bike_stand_info')">
+            <img src="assets/images/ic_bike.png">
+            <h3>5</h3>
+        </div>
+        <div class="bike_stand animate__animated animate__zoomIn " style="top:30%; left: 74%;" (click)="showBikeStandInfo('bike_stand_info')">
+            <img src="assets/images/ic_bike.png">
+            <h3>4</h3>
+        </div>
+        <div class="bike_stand animate__animated animate__zoomIn " style="top:38%; left: 20%;" (click)="showBikeStandInfo('bike_stand_info')">
+            <img src="assets/images/ic_bike.png">
+            <h3>5</h3>
+        </div>
+        <div class="bike_stand animate__animated animate__zoomIn " style="top:42%; left: 50%;" (click)="showBikeStandInfo('bike_stand_info')">
+            <img src="assets/images/ic_bike.png">
+            <h3>7</h3>
+        </div>
+        <div class="bike_stand animate__animated animate__zoomIn " style="top:46%; left: 76%;" (click)="showBikeStandInfo('bike_stand_info')">
+            <img src="assets/images/ic_bike.png">
+            <h3>2</h3>
+        </div>
+        <div class="bike_stand animate__animated animate__zoomIn " style="top:57%; left: 17%;" (click)="showBikeStandInfo('bike_stand_info')">
+            <img src="assets/images/ic_bike.png">
+            <h3>8</h3>
+        </div>
+
+        <div class="my_location animate__animated animate__zoomIn" style="top:70%; left: 54%;" (click)="showBikeStandInfo('bike_stand_info')">
+            <div class="animation_box a"></div>
+            <div class="animation_box b"></div>
+            <ion-icon class="zmdi zmdi-navigation"></ion-icon>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border ">
+    <!-- Enable Location section start -->
+    <div class="enable_location animate__animated animate__fadeInUp" *ngIf="currDiv == 'enableLocation'">
+        <div class="enable_location_header d-flex ">
+            <h2 class="animate__animated animate__fadeInUp ">
+                {{'get' | translate}} Ekobike<br>{{'anywhere' | translate}}...
+            </h2>
+            <div class="img_box end animate__animated animate__fadeInRight ">
+                <img src="assets/images/banner_img2.png ">
+            </div>
+        </div>
+        <div class="enable_location_content ">
+            <p class="animate__animated animate__fadeInUp ">{{'please_allow_us_to_use_your_location' | translate}}</p>
+            <ion-button size="large " shape="block " class="btn animate__animated animate__fadeInUp" (click)="ShowDiv('scan_btn')">
+                {{'enable_location' | translate}}
+            </ion-button>
+        </div>
+    </div>
+    <!--Enable Location section end -->
+
+    <div class="scan_btn" *ngIf="currDiv == 'scan_btn'">
+        <ion-button size="large" shape="block" class="btn animate__animated animate__fadeInUp" (click)="qrScan()">
+            <img src="assets/images/ic_scan.png">&nbsp;&nbsp; {{'scan_now' | translate}}
+        </ion-button>
+    </div>
+
+
+    <!-- Bike Stand Info section start -->
+
+    <div class="bike_stand_info animate__animated animate__fadeInUp" *ngIf="BikeStandInfo == 'bike_stand_info'" [ngClass]="toggleClass ? 'toggleClass active' : 'toggleClass'">
+        <div class="pullup" (click)="show_scooters()"></div>
+        <div class="bike_stand_info_header d-flex" (click)="show_scooters()">
+            <div class="icon_box">
+                <img src="assets/images/ic_bike.png">
+            </div>
+            <div class="text_box">
+                <h2>Avenue close, Magodo phase 1</h2>
+                <h3 class="d-flex">
+                    5 {{'scooters_available' | translate}}
+                    <ion-icon class="zmdi zmdi-chevron-up"></ion-icon>
+                </h3>
+            </div>
+            <div class="distance ion-text-center end">
+                <ion-icon class="zmdi zmdi-navigation"></ion-icon>
+                <h4>3.2Km</h4>
+            </div>
+        </div>
+
+        <div class="scooters_container">
+            <div class="scooter" (click)="unlocking()">
+                <div class="scooter_header d-flex">
+                    <div class="text_box">
+                        <h2>BK2145</h2>
+                        <h3 class="d-flex">
+                            <ion-icon class="zmdi zmdi-pin"></ion-icon>
+                            3.2km
+                        </h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/banner_img.png">
+                    </div>
+                </div>
+
+                <div class="scooter_footer d-flex">
+                    <img src="assets/images/ic_power.png">&nbsp;&nbsp;
+                    <h3>
+                        {{'range' | translate}}
+                        <strong>30-35km</strong>
+                    </h3>
+                    <ion-icon class="zmdi zmdi-notifications-active end  ion-text-end"></ion-icon>
+                </div>
+            </div>
+            <div class="scooter" (click)="unlocking()">
+                <div class="scooter_header d-flex">
+                    <div class="text_box">
+                        <h2>BK2145</h2>
+                        <h3 class="d-flex">
+                            <ion-icon class="zmdi zmdi-pin"></ion-icon>
+                            3.2km
+                        </h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/banner_img.png">
+                    </div>
+                </div>
+
+                <div class="scooter_footer d-flex">
+                    <img src="assets/images/ic_power.png">&nbsp;&nbsp;
+                    <h3>
+                        {{'range' | translate}}
+                        <strong>30-35km</strong>
+                    </h3>
+                    <ion-icon class="zmdi zmdi-notifications-active end  ion-text-end"></ion-icon>
+                </div>
+            </div>
+            <div class="scooter" (click)="unlocking()">
+                <div class="scooter_header d-flex">
+                    <div class="text_box">
+                        <h2>BK2145</h2>
+                        <h3 class="d-flex">
+                            <ion-icon class="zmdi zmdi-pin"></ion-icon>
+                            3.2km
+                        </h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/banner_img.png">
+                    </div>
+                </div>
+
+                <div class="scooter_footer d-flex">
+                    <img src="assets/images/ic_power.png">&nbsp;&nbsp;
+                    <h3>
+                        {{'range' | translate}}
+                        <strong>30-35km</strong>
+                    </h3>
+                    <ion-icon class="zmdi zmdi-notifications-active end  ion-text-end"></ion-icon>
+                </div>
+            </div>
+            <div class="scooter" (click)="unlocking()">
+                <div class="scooter_header d-flex">
+                    <div class="text_box">
+                        <h2>BK2145</h2>
+                        <h3 class="d-flex">
+                            <ion-icon class="zmdi zmdi-pin"></ion-icon>
+                            3.2km
+                        </h3>
+                    </div>
+                    <div class="img_box end">
+                        <img src="assets/images/banner_img.png">
+                    </div>
+                </div>
+
+                <div class="scooter_footer d-flex">
+                    <img src="assets/images/ic_power.png">&nbsp;&nbsp;
+                    <h3>
+                        {{'range' | translate}}
+                        <strong>30-35km</strong>
+                    </h3>
+                    <ion-icon class="zmdi zmdi-notifications-active end  ion-text-end"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bike Stand Info section end -->
+</ion-footer>

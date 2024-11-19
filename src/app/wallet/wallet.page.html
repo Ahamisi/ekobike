@@ -1,0 +1,220 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <ion-icon class="zmdi zmdi-more-vert end ion-text-end"></ion-icon>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <div class="header_text">
+        <h2 class="animate__animated animate__fadeInUp">
+            {{"available_balance" | translate}}
+        </h2>
+        <h1 class="animate__animated animate__fadeInUp">
+            ₦106.80
+        </h1>
+        <ion-button size="large" shape="block" class="btn animate__animated animate__fadeInUp" (click)="addMoney()">{{'add_money_to_wallet' | translate}}</ion-button>
+        <h3 class="d-flex animate__animated animate__fadeInUp">
+            <ion-icon class="zmdi zmdi-lock"></ion-icon>
+            {{"securty_deosite_aded" | translate}}
+            <ion-icon class="zmdi zmdi-help-outline ion-text-end"></ion-icon>
+            <span class="end">₦50</span>
+        </h3>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <ion-list lines="none">
+        <h2>{{"recent_transactions" | translate}}</h2>
+        <ion-item class="animate__animated animate__fadeInUp ">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-bike"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Paid for Ride
+                        <span class="end">-₦12.50</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp ">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-bike"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Paid for Ride
+                        <span class="end">-₦16.30</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp money_added">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-balance-wallet"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Wallet top-up
+                        <span class="end">+100.00</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp ">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-bike"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Paid for Ride
+                        <span class="end">-₦6.50</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp ">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-bike"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Paid for Ride
+                        <span class="end">-₦22.30</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp money_added">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-lock"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Security Deposited
+                        <span class="end">+50.00</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp ">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-bike"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Paid for Ride
+                        <span class="end">-₦12.50</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp ">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-bike"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Paid for Ride
+                        <span class="end">-₦16.30</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp money_added">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-balance-wallet"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Wallet top-up
+                        <span class="end">+100.00</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp ">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-bike"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Paid for Ride
+                        <span class="end">-₦6.50</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp ">
+            <div class="item_inner d-flex">
+                <div class="icon_box">
+                    <ion-icon class="zmdi zmdi-bike"></ion-icon>
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        Paid for Ride
+                        <span class="end">-₦22.30</span>
+                    </h3>
+                    <h4>
+                        12 Aug 2022, 06:53 pm
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

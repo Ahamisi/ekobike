@@ -1,0 +1,7 @@
+{
+  "name": "Electra",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

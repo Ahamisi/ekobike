@@ -1,0 +1,407 @@
+ion-header {
+    background: var(--white_gradient);
+    ion-toolbar {
+        ion-title {
+            .app_logo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                min-height: 75px;
+                img {
+                    margin: auto;
+                    width: 70px;
+                }
+            }
+        }
+    }
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.enable_location {
+    position: relative;
+    --animate-duration: 0.25s;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 37px);
+        background: var(--bg-white);
+        border-radius: 20px 20px 0 0;
+    }
+    .enable_location_header {
+        padding-left: 25px;
+        position: relative;
+        z-index: 99;
+        align-items: flex-start;
+        h2 {
+            margin: 0;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1.45rem;
+            width: 100%;
+            padding-top: 60px;
+            line-height: 30px;
+        }
+        .img_box {
+            min-width: fit-content;
+            --animate-duration: 0.4s;
+            img {
+                width: 155px;
+                position: relative;
+            }
+        }
+    }
+    .enable_location_content {
+        padding: 0 25px;
+        position: relative;
+        top: -30px;
+        z-index: 9999;
+        p {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 1rem;
+            width: 100%;
+            font-weight: 500;
+            line-height: 24px;
+            padding-bottom: 33px;
+            width: calc(100% - 20px);
+        }
+    }
+}
+
+.bike_stand {
+    position: absolute;
+    z-index: 9999;
+    background: var(--primary);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0px 32px 1px var(--primary);
+    img {
+        width: 20px;
+        margin: auto;
+        display: block;
+    }
+    h3 {
+        margin: 0;
+        position: absolute;
+        top: -6px;
+        right: -5px;
+        background: var(--white);
+        border-radius: 50%;
+        color: var(--primary);
+        font-size: .7rem;
+        font-weight: 600;
+        min-width: 17px;
+        text-align: center;
+        min-height: 17px;
+        line-height: 17px;
+    }
+}
+
+.my_location {
+    position: absolute;
+    z-index: 9999;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    ion-icon {
+        color: var(--primary);
+        display: block;
+        margin: auto;
+        text-align: center;
+        font-size: 1.4rem;
+        position: relative;
+        z-index: 99;
+        background: var(--white);
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+    }
+    .animation_box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 50%;
+        margin: auto;
+        transition: all .3s;
+        background: var(--primary);
+        z-index: -99;
+        &.a {
+            width: 100px;
+            height: 100px;
+            opacity: .2;
+            -webkit-animation: a 1.5s both infinite;
+            animation: a 1.5s both infinite;
+        }
+        &.b {
+            width: 70px;
+            height: 70px;
+            -webkit-animation: b 2s both infinite;
+            animation: b 2s both infinite;
+            opacity: .3;
+        }
+    }
+}
+
+@keyframes a {
+    from {
+        height: 0%;
+        width: 0;
+    }
+    to {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@keyframes b {
+    from {
+        height: 0%;
+        width: 0;
+    }
+    to {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.scan_btn {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    .button.btn {
+        width: fit-content;
+        margin: 0 auto;
+        --box-shadow: 0 13px 18px 0px rgb(28 173 110 / 42%) !important;
+        img {
+            min-width: 27px;
+            width: 27px;
+        }
+    }
+}
+
+.bike_stand_info {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    background: rgb(255 255 255 / 72%);
+    backdrop-filter: blur(4px);
+    padding-top: 20px;
+    padding-bottom: 97px;
+    .pullup {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 22px;
+        z-index: 999;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 50px;
+            height: 5px;
+            margin: auto;
+            background: #d7d7d7;
+            border-radius: 5px;
+        }
+    }
+    .bike_stand_info_header {
+        padding: 0 15px 8px 15px;
+        .icon_box {
+            background: var(--primary);
+            border-radius: 50%;
+            min-width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            img {
+                width: 20px;
+                margin: auto;
+                display: block;
+            }
+        }
+        .text_box {
+            width: 100%;
+            h2 {
+                margin: 0;
+                color: var(--text-dark);
+                font-size: 1.2rem;
+                padding-bottom: 5px;
+            }
+            h3 {
+                margin: 0;
+                color: var(--text-light);
+                font-size: 1.05rem;
+                ion-icon {
+                    text-align: center;
+                    font-size: 1.3rem;
+                    color: var(--text-dark);
+                    min-width: 30px;
+                    transition: all .3s;
+                }
+            }
+        }
+        .distance {
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            min-width: 60px;
+            min-height: 60px;
+            padding: 4px 5px;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--primary);
+                opacity: .1;
+            }
+            ion-icon {
+                color: var(--primary);
+                font-size: 1.7rem;
+                display: block;
+                margin: 0 auto;
+                transform: rotate(45deg);
+                position: relative;
+                z-index: 99;
+            }
+            h4 {
+                margin: 0;
+                color: var(--primary);
+                font-size: .8rem;
+                padding-top: 6px;
+                position: relative;
+                z-index: 99;
+            }
+        }
+    }
+    .scooters_container {
+        overflow: hidden;
+        white-space: nowrap;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        height: 0px;
+        transition: all .4s;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .scooter {
+            display: inline-block;
+            border: 2px solid var(--border-line-color);
+            border-radius: 10px;
+            background: var(--bg-color);
+            margin: 0 5px;
+            padding: 10px 0;
+            max-width: 155px;
+            overflow: hidden;
+            &:first-child {
+                margin-left: 15px;
+            }
+            &:last-child {
+                margin-right: 15px;
+            }
+            .scooter_header {
+                padding-left: 15px;
+                align-items: flex-start;
+                padding-bottom: 45px;
+                .text_box {
+                    width: 100%;
+                    position: relative;
+                    top: 7px;
+                    h2 {
+                        margin: 0;
+                        color: var(--text-dark);
+                        font-size: 1.05rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        padding-bottom: 12px;
+                    }
+                    h3 {
+                        color: var(--text-light);
+                        margin: 0;
+                        font-size: .8rem;
+                        ion-icon {
+                            font-size: .9rem;
+                            min-width: 14px;
+                            color: var(--text-light);
+                        }
+                    }
+                }
+                .img_box {
+                    min-width: fit-content;
+                    height: 44px;
+                    img {
+                        width: 75px;
+                        position: relative;
+                    }
+                }
+            }
+            .scooter_footer {
+                padding: 0 15px;
+                img {
+                    width: 10px;
+                    min-width: 10px;
+                }
+                ion-icon {
+                    color: var(--primary);
+                    font-size: 1.3rem;
+                }
+                h3 {
+                    color: var(--text-light);
+                    margin: 0;
+                    font-size: 0.6rem;
+                    strong {
+                        color: var(--text-dark);
+                        font-size: 0.85rem;
+                        font-weight: 500;
+                        letter-spacing: 0.5px;
+                        display: block;
+                        padding-top: 4px;
+                    }
+                }
+            }
+        }
+    }
+    &.active {
+        .bike_stand_info_header .text_box h3 ion-icon {
+            transform: rotate(180deg);
+        }
+        .scooters_container {
+            height: 155px;
+        }
+    }
+}

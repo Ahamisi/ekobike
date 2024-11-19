@@ -1,0 +1,111 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <div class="header_text">
+        <h1 class="animate__animated animate__fadeInUp">
+            {{"faq" | translate}}
+        </h1>
+        <h2 class="animate__animated animate__fadeInUp">
+            {{"your_question_got_answered" | translate}}
+        </h2>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <h2>General Questions</h2>
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand1 ? 'active' : '' " (click)="faqExpandToggle1()">
+            <div class="item_inner">
+                <h3 class="d-flex">How to book ride?
+                    <ion-icon class="zmdi zmdi-chevron-down ion-text-center end"></ion-icon>
+                </h3>
+                <div class="text_box">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand2 ? 'active' : '' " (click)="faqExpandToggle2()">
+            <div class="item_inner">
+                <h3 class="d-flex">How to end a ride?
+                    <ion-icon class="zmdi zmdi-chevron-down ion-text-center end"></ion-icon>
+                </h3>
+                <div class="text_box">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand3 ? 'active' : '' " (click)="faqExpandToggle3()">
+            <div class="item_inner">
+                <h3 class="d-flex">How to add money in wallet?
+                    <ion-icon class="zmdi zmdi-chevron-down ion-text-center end"></ion-icon>
+                </h3>
+                <div class="text_box">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand4 ? 'active' : '' " (click)="faqExpandToggle4()">
+            <div class="item_inner">
+                <h3 class="d-flex">How to book ride?
+                    <ion-icon class="zmdi zmdi-chevron-down ion-text-center end"></ion-icon>
+                </h3>
+                <div class="text_box">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                </div>
+            </div>
+        </ion-item>
+
+        <h2>Ride Questions</h2>
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand5 ? 'active' : '' " (click)="faqExpandToggle5()">
+            <div class="item_inner">
+                <h3 class="d-flex">How to ride a Bicycle right way ?
+                    <ion-icon class="zmdi zmdi-chevron-down ion-text-center end"></ion-icon>
+                </h3>
+                <div class="text_box">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand6 ? 'active' : '' " (click)="faqExpandToggle6()">
+            <div class="item_inner">
+                <h3 class="d-flex">What if Bicycle got crashed?
+                    <ion-icon class="zmdi zmdi-chevron-down ion-text-center end"></ion-icon>
+                </h3>
+                <div class="text_box">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand7 ? 'active' : '' " (click)="faqExpandToggle7()">
+            <div class="item_inner">
+                <h3 class="d-flex">What if Bicycle stop working?
+                    <ion-icon class="zmdi zmdi-chevron-down ion-text-center end"></ion-icon>
+                </h3>
+                <div class="text_box">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand8 ? 'active' : '' " (click)="faqExpandToggle8()">
+            <div class="item_inner">
+                <h3 class="d-flex">What if QR code unable to scan?
+                    <ion-icon class="zmdi zmdi-chevron-down ion-text-center end"></ion-icon>
+                </h3>
+                <div class="text_box">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book.</p>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>
